@@ -10,7 +10,7 @@
 ## Introduction
 
 - Due date: Check Discord or the [Course Materials Schedule](https://github.com/allegheny-college-cmpsc-101-spring-2024/course-materials/blob/main/Schedule.md)
-- This assignment is pass/fail and will be evaluated as
+- This assignment is pass/fail. 100%(0%) is earned for a gatorgrade score of 100%(<100%) as
 described in the syllabus section for
 [Assignment Evaluation](https://github.com/allegheny-college-cmpsc-101-spring-2024/course-materials?tab=readme-ov-file#assignment-evaluation)
 - Submit this assignment on GitHub following the expectations in the syllabus on
@@ -40,6 +40,13 @@ of the concepts. Examples of plagiarism include:
 To claim that work is your own, it is essential to craft the logic and the
 writing together without copying or using the logical structure of another
 source. The honor code holds everyone to this standard.
+
+## Objectives
+
+1. Use git, GitHub, VS Code effectively to explore source code
+2. Run python scripts
+3. Read about number representations
+4. Review Python foundations
 
 ## Project Overview
 
