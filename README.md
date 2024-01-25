@@ -16,10 +16,11 @@ described in the syllabus section for
 - Submit this assignment on GitHub following the expectations in the syllabus on
 [Assignment Submission](https://github.com/allegheny-college-cmpsc-101-spring-2024/course-materials#assignment-submission).
 - To begin, read this `README` and the Proactive Programmers' project
-description for
-[Numerical Data](https://proactiveprogrammers.com/data-abstraction/source-code-surveys/numerical-data/)
+[instructions](https://proactiveprogrammers.com/data-abstraction/source-code-surveys/numerical-data/)
 - This project has been adapted from Proactive Programmers' material, thus discrepancies are possible.
 - Post to the #data-structures Discord channel for questions and clarifications.
+- For reference, check the
+[starter repo](https://github.com/allegheny-college-cmpsc-101-spring-2024/numerical-data-starter)
 
 ## Seeking Assistance
 
