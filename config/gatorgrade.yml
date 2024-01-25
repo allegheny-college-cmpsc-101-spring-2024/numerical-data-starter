@@ -1,0 +1,134 @@
+- source/determine-even-odd.py:
+    - description: Ensure that determine-even-odd.py file exists in the source/ directory
+      check: ConfirmFileExists
+    - description: Complete all TODOs, remove the TODO markers, and rewrite comments for determine-even-odd.py
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Create a sufficient number of docstring (i.e., multiple-line) comments in determine-even-odd.py
+      check: CountMultipleLineComments
+      options:
+        language: "Python"
+        count: 1
+        exact: false
+    - description: Create a sufficient number of single-line comments in determine-even-odd.py
+      check: CountSingleLineComments
+      options:
+        language: "Python"
+        count: 5
+        exact: false
+
+- source/floating-point-confusion.py:
+    - description: Ensure that floating-point-confusion.py file exists in the source/ directory
+      check: ConfirmFileExists
+    - description: Complete all TODOs, remove the TODO markers, and rewrite comments for floating-point-confusion.py
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Create a sufficient number of docstring (i.e., multiple-line) comments in floating-point-confusion.py
+      check: CountMultipleLineComments
+      options:
+        language: "Python"
+        count: 1
+        exact: false
+    - description: Create a sufficient number of single-line comments in floating-point-confusion.py
+      check: CountSingleLineComments
+      options:
+        language: "Python"
+        count: 5
+        exact: false
+
+# perform checks on a file
+- writing/reflection.md:
+    - description: Ensure that the reflection.md file exists in the writing/ directory
+      check: ConfirmFileExists
+    - description: Complete all TODOs, remove the TODO markers, and rewrite comments for reflection.md
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Confirm that there is a reference to specific source code in the writing (check gatorgrade.yml)
+      check: MatchFileFragment
+      options:
+        fragment: "`%`"
+        count: 2
+        exact: false
+    - description: Write a minimum number of meaningful words in the reflection (check gatorgrade.yml)
+      check: CountFileWords
+      options:
+        count: 450
+        exact: false
+    - description: Confirm that the markdown file has the correct number of headers
+      check: CountMarkdownTags
+      options:
+        tag: heading
+        count: 14
+        exact: false
+    - description: Confirm that the markdown file has the correct number of fenced code blocks
+      check: CountMarkdownTags
+      options:
+        tag: code_block
+        count: 4
+        exact: false
+
+# run the program and confirm the existence of fragments in its output
+- description: Run a program and confirm the correct number of non-blank lines in the output
+  check: CountCommandOutput
+  options:
+    command: "python source/determine-even-odd.py"
+    count: 6
+    exact: true
+
+# run the program and confirm the existence of fragments in its output
+- description: Run a program and confirm the correct number of non-blank lines in the output
+  check: CountCommandOutput
+  options:
+    command: "python source/floating-point-confusion.py"
+    count: 4
+    exact: true
+
+# run the program and confirm the existence of fragments in its output
+- description: "Run the program and confirm the existence of content in its output: is equal to 1.0!"
+  check: MatchCommandFragment
+  options:
+    command: "python source/floating-point-confusion.py"
+    fragment: "is equal to 1.0!"
+    count: 1
+    exact: true
+
+# run the program and confirm the existence of fragments in its output
+- description: "Run the program and confirm the existence of content in its output: not equal to 1.0!"
+  check: MatchCommandFragment
+  options:
+    command: "python source/floating-point-confusion.py"
+    fragment: "not equal to 1.0!"
+    count: 1
+    exact: true
+
+# run the program and confirm the existence of fragments in its output
+- description: "Run the program and confirm the existence of content in its output: The number of 0 is even!"
+  check: MatchCommandFragment
+  options:
+    command: "python source/determine-even-odd.py"
+    fragment: "The number of 0 is even!"
+    count: 1
+    exact: true
+
+# run the program and confirm the existence of fragments in its output
+- description: "Run the program and confirm the existence of content in its output: The number of -11 is odd!"
+  check: MatchCommandFragment
+  options:
+    command: "python source/determine-even-odd.py"
+    fragment: "The number of -11 is odd!"
+    count: 1
+    exact: true
+
+- description: Have at least 7 commits in repository (N.B. commit is not the same as push)
+  check: CountCommits
+  options:
+    count: 7
